@@ -234,12 +234,13 @@ def example(zeta,d,p):
     # print("% Error compared to exact = ","{0:.3f}".format(error_exact.real),'%')
     # print("% Error bound = ","{0:.3f}".format(bound),'%')
     # print("% Error compared to potential using M.E. of 'B' = ","{0:.3f}".format(error_rot.real),'%')
-    return error_exact.real
+    return error_rot.real
 
 # run example over zeta = 2*pi and d = 1-10 
-theta = np.linspace(10.0*np.pi/180,350.0*np.pi/180,100)
-R = np.linspace(1.0,3.0,100)
-error = np.array([[example(zeta,d,5) \
+theta = np.linspace(5.0*np.pi/180,355.0*np.pi/180,100)
+R = np.linspace(1,5.0,100)
+error = np.array([[example(zeta,d,3) \
+                   #for d in R] for zeta in theta])
                    for zeta in theta] for d in R])
 
 # Plot the results
@@ -254,7 +255,7 @@ plt.figure()
 plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
 
-CS = plt.contour(R/0.5, theta*180/np.pi, error)
+CS = plt.contour((R-0.5)/0.5, theta*180/np.pi, error.T)
 plt.clabel(CS, inline=1, fontsize=10)
 
 # make a colorbar for the contour lines

@@ -43,7 +43,8 @@ def my_sph(m,n,theta,phi):
     Ymn = C*Pmn*sc.exp(1j*m*phi)
     return Ymn
 
-class ChargedBody:
+# class ChargedBody:
+cdef class ChargedBody:
     """
     This is the class that contains the charge properties of a body
         inputs: 
@@ -52,7 +53,8 @@ class ChargedBody:
             iD       - number of the body
     """
     # Initialize instance
-    def __init__(self, q, q_coords, iD):
+    # def __init__(self, q, q_coords, iD):
+    def __cinit__(self, q, q_coords, iD):
         self.q        = q
         self.iD       = iD
         self.num_q    = len(q)
