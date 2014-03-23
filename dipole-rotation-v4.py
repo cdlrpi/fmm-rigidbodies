@@ -298,7 +298,7 @@ bound = bound/VB_rms*100
 # <codecell>
 
 # Plot the results
-%matplotlib inline
+# %matplotlib inline
 
 plt.close('all')
 
@@ -374,7 +374,7 @@ plt.savefig('ErrorMultipole.pdf')
 
 # <codecell>
 
- p = 2
+p = 2
 # dist = 2
 # theta = 0*np.pi/180
 # error = example(theta,dist,p)
