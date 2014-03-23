@@ -1,7 +1,0 @@
-@/atom:dipole/O   1       #"dipole.lt", line 12
-@/atom:dipole/H   2       #"dipole.lt", line 13
-@/bond:dipole/OH   1       #"dipole.lt", line 21
-$/atom:dipole/O   1       #"dipole.lt", line 7
-$/atom:dipole/H   2       #"dipole.lt", line 8
-$/mol:dipole   1       #"dipole.lt", line 7
-$/bond:dipole/OH   1       #"dipole.lt", line 17

@@ -1,6 +1,0 @@
-    bond_coeff   @/bond:dipole/OH     harmonic                 	200.0   1.0 
-    pair_coeff   @/atom:dipole/O @/atom:dipole/O  lj/cut/coul/long  	0.1553  3.166 
-    pair_coeff   @/atom:dipole/H @/atom:dipole/H  lj/cut/coul/long  	0.0     2.058
-    group spc type  @/atom:dipole/O  @/atom:dipole/H
-    fix shake spc shake 0.0001 10 0 b @/bond:dipole/OH 
-    # (Remember to "unfix" fSHAKE during minimization.)

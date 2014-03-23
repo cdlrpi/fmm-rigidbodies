@@ -1,6 +1,0 @@
-    bond_coeff   1     harmonic                 	200.0   1.0 
-    pair_coeff   1 1  lj/cut/coul/long  	0.1553  3.166 
-    pair_coeff   2 2  lj/cut/coul/long  	0.0     2.058
-    group spc type  1  2
-    fix shake spc shake 0.0001 10 0 b 1 
-    # (Remember to "unfix" fSHAKE during minimization.)
