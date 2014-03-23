@@ -266,7 +266,7 @@ p  = 3
 # Terms in multipole exansion 
 
 # Number of data points in range
-n_points = 20
+n_points = 1000
 
 # Create variable arrays
 theta = np.linspace(0,2*np.pi,n_points)
