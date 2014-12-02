@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# <nbformat>3.0</nbformat>
-
-# <codecell>
-
 # import modules
 import numpy as np
 
@@ -16,8 +11,6 @@ import matplotlib.mlab as mlab
 import matplotlib.pyplot as plt
 from matplotlib import rc
 
-# <codecell>
-
 # Note: this transforms A to B
 def DCM(theta):
     C = np.array([[np.cos(theta), -np.sin(theta), 0],
@@ -25,7 +18,6 @@ def DCM(theta):
                   [0, 0, 1]])
     return C
 
-# <codecell>
 
 # function that converts cartesian coordinates to pherical
 def cart_to_sph(r):
@@ -50,7 +42,6 @@ def cart_to_sph(r):
         r_sph = [dict(zip(['rho','alpha','beta'], r)) for r in r_sph]
         return r_sph
 
-# <codecell>
 
 # compute spherical harmonics using semi-normalized formula
 def my_sph(m,n,theta,phi):
@@ -60,7 +51,6 @@ def my_sph(m,n,theta,phi):
     Ymn = C*Pmn*sc.exp(1j*m*phi)
     return Ymn
 
-# <codecell>
 
 class ChargedBody:
     """
@@ -298,7 +288,6 @@ bound = bound/VB_rms*100
 # <codecell>
 
 # Plot the results
-%matplotlib inline
 
 plt.close('all')
 
@@ -374,7 +363,7 @@ plt.savefig('ErrorMultipole.pdf')
 
 # <codecell>
 
- p = 2
+# p = 2
 # dist = 2
 # theta = 0*np.pi/180
 # error = example(theta,dist,p)
